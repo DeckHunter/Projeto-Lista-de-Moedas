@@ -21,15 +21,15 @@ Interface deve ser completamente separada da Model, requisições e controladore
 
 # 🕵🏻‍♂️ Itens a serem avaliados
 
-Parse dos dados [formatação para Reais R$]
-Clareza nos dados exibidos na tela
-Estrutura do Projeto !Muito importante!
-Qualidade de código [Evitar gambiarra]
-Uso de Package [Usar o minimo de package]
-Qualidade da UX [Qualidade de uso da tela]
-Bugs [Serão considerados na avaliação]
-Gerencia de Estado [Persistencia e reatividade]
-Performance
+Parse dos dados [formatação para Reais R$] <br>
+Clareza nos dados exibidos na tela <br>
+Estrutura do Projeto !Muito importante! <br>
+Qualidade de código [Evitar gambiarra] <br>
+Uso de Package [Usar o minimo de package] <br>
+Qualidade da UX [Qualidade de uso da tela] <br>
+Bugs [Serão considerados na avaliação] <br>
+Gerencia de Estado [Persistencia e reatividade] <br>
+Performance <br>
 
 # 🎁 Extra
 
