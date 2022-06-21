@@ -35,9 +35,9 @@ Performance
 
 Esses itens não são obrigatórios, porém desejados.
 
-Shimmer effect para carregar os dados (Moedas etc...)<br>
-GetX ou ValueNotify com ou sem RXNotify<br>
-Arquitetura Limpa<br>
+Shimmer effect para carregar os dados (Moedas etc...) <br>
+GetX ou ValueNotify com ou sem RXNotify <br>
+Arquitetura Limpa <br>
 
-UI/UX e fluxo de navegação fica livre para o seu gosto!<br>
+UI/UX e fluxo de navegação fica livre para o seu gosto! <br>
 
