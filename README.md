@@ -1,22 +1,25 @@
+# 🏗 O que fazer?
 
-🏗 O que fazer?
 Projeto: Lista de Moedas
-Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe (ti@coins.com.br). Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos avaliar e retornar por email o resultado do seu teste.
-#🖥 O que desenvolver?
+Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. 
+Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos avaliar e retornar por email o resultado do seu teste.
 
-Lista de Criptomoedas baseada no json \n
-Mostrar o Saldo do usuario e ID da carteira
-Ao Clicar em uma moeda motrar os detalhes dela (Pode ser expandido, snackBar ou Tela nova)
+# 🖥 O que desenvolver?
 
-🚨 Requisitos
+Lista de Criptomoedas baseada no json< br>
+Mostrar o Saldo do usuario e ID da carteira <br>
+Ao Clicar em uma moeda motrar os detalhes dela (Pode ser expandido, snackBar ou Tela nova) <br>
 
-O App deve ser feito em Dart/Flutter
-Não editar o json de forma alguma
-Proibido uso de MobX ou geração de código
+# 🚨 Requisitos
+
+O App deve ser feito em Dart/Flutter. <br>
+Não editar o json de forma alguma. <br>
+Proibido uso de MobX ou geração de código. <br>
 
 OBS: Todos os dados devem ser baseados no JSON
 Interface deve ser completamente separada da Model, requisições e controladores
-🕵🏻‍♂️ Itens a serem avaliados
+
+# 🕵🏻‍♂️ Itens a serem avaliados
 
 Parse dos dados [formatação para Reais R$]
 Clareza nos dados exibidos na tela
@@ -28,13 +31,13 @@ Bugs [Serão considerados na avaliação]
 Gerencia de Estado [Persistencia e reatividade]
 Performance
 
-🎁 Extra
+# 🎁 Extra
+
 Esses itens não são obrigatórios, porém desejados.
 
-Shimmer effect para carregar os dados (Moedas etc...)
-GetX ou ValueNotify com ou sem RXNotify
-Arquitetura Limpa
+Shimmer effect para carregar os dados (Moedas etc...)<br>
+GetX ou ValueNotify com ou sem RXNotify<br>
+Arquitetura Limpa<br>
 
-UI/UX e fluxo de navegação fica livre para o seu gosto!
-🔗 UTILIDADE
-Contato para duvidas: ericmontelares3@gmail.com
+UI/UX e fluxo de navegação fica livre para o seu gosto!<br>
+
