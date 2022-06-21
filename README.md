@@ -6,7 +6,7 @@ Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos aval
 
 # 🖥 O que desenvolver?
 
-Lista de Criptomoedas baseada no json< br>
+Lista de Criptomoedas baseada no json <br>
 Mostrar o Saldo do usuario e ID da carteira <br>
 Ao Clicar em uma moeda motrar os detalhes dela (Pode ser expandido, snackBar ou Tela nova) <br>
 
