@@ -1,16 +1,43 @@
-# applistamoedas
+# 🏗 O que fazer?
 
-A new Flutter project.
+Projeto: Lista de Moedas
+Você deve realizar um fork deste repositório e, ao finalizar, enviar o link do seu repositório para a nossa equipe. 
+Lembre-se, NÃO é necessário criar um Pull Request para isso, nós iremos avaliar e retornar por email o resultado do seu teste.
 
-## Getting Started
+# 🖥 O que desenvolver?
 
-This project is a starting point for a Flutter application.
+Lista de Criptomoedas baseada no json <br>
+Mostrar o Saldo do usuario e ID da carteira <br>
+Ao Clicar em uma moeda motrar os detalhes dela (Pode ser expandido, snackBar ou Tela nova) <br>
 
-A few resources to get you started if this is your first Flutter project:
+# 🚨 Requisitos
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+O App deve ser feito em Dart/Flutter. <br>
+Não editar o json de forma alguma. <br>
+Proibido uso de MobX ou geração de código. <br>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+OBS: Todos os dados devem ser baseados no JSON
+Interface deve ser completamente separada da Model, requisições e controladores
+
+# 🕵🏻‍♂️ Itens a serem avaliados
+
+Parse dos dados [formatação para Reais R$] <br>
+Clareza nos dados exibidos na tela <br>
+Estrutura do Projeto !Muito importante! <br>
+Qualidade de código [Evitar gambiarra] <br>
+Uso de Package [Usar o minimo de package] <br>
+Qualidade da UX [Qualidade de uso da tela] <br>
+Bugs [Serão considerados na avaliação] <br>
+Gerencia de Estado [Persistencia e reatividade] <br>
+Performance <br>
+
+# 🎁 Extra
+
+Esses itens não são obrigatórios, porém desejados.
+
+Shimmer effect para carregar os dados (Moedas etc...) <br>
+GetX ou ValueNotify com ou sem RXNotify <br>
+Arquitetura Limpa <br>
+
+UI/UX e fluxo de navegação fica livre para o seu gosto! <br>
+
