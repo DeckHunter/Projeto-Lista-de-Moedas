@@ -5,6 +5,5 @@ class Usuario {
   String? walletId;
   String? userBalance;
   List<Moeda>? moedas;
-  List<Usuario>? usuarios;
   Usuario({this.message, this.walletId, this.userBalance, this.moedas});
 }

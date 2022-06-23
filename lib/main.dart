@@ -1,4 +1,4 @@
-import 'package:applistamoedas/src/req/ler_json.dart';
+import 'package:applistamoedas/src/request/ler_json_request.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
-      TrabalhandoJson();
+      LerJson();
     });
   }
 
