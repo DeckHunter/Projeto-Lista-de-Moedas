@@ -1,5 +1,7 @@
 import 'package:applistamoedas/src/models/Detalhes.dart';
 
+List<Moeda> moedas = [];
+
 class Moeda {
   String? currencyName;
   String? cotation;
@@ -13,21 +15,18 @@ class Moeda {
       this.imageUrl,
       this.detalhes});
 
-  Moeda.fromJson(Map<String, dynamic> json) {
-    currencyName = json['currency_name'];
-    cotation = json['cotation'];
-    symbol = json['symbol'];
-    imageUrl = json['image_url'];
-    detalhes = json['details'];
+  AddMoeda(nome, cotacao, simbolo, urlImg, detalhe) {
+    Moeda n = new Moeda(
+      cotation: cotacao,
+      currencyName: nome,
+      symbol: simbolo,
+      imageUrl: urlImg,
+      detalhes: detalhe,
+    );
+    moedas.add(n);
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['currency_name'] = this.currencyName;
-    data['cotation'] = this.cotation;
-    data['symbol'] = this.symbol;
-    data['image_url'] = this.imageUrl;
-    data['details'] = this.detalhes;
-    return data;
+  List<Moeda> GetListMoedas() {
+    return moedas;
   }
 }
