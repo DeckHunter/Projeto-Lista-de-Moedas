@@ -1,4 +1,12 @@
+import 'dart:convert';
+
+import 'package:applistamoedas/src/models/Detalhes.dart';
+import 'package:applistamoedas/src/models/Moeda.dart';
+import 'package:applistamoedas/src/models/Usuario.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -58,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      Teste();
     });
   }
 
@@ -112,4 +121,50 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+void Teste() {
+  Uri uri = Uri.http(
+    'gitlab.com',
+    '/coinswalletbr/coins-flutter-mobile-test/-/raw/main/criptomoedas.json',
+  );
+  final future = http.get(uri);
+
+  future.then((response) {
+    if (response.statusCode == 200) {
+      final jsonData = jsonDecode(response.body);
+      final coinsJson = jsonEncode(jsonData['data']);
+      final coins = jsonDecode(coinsJson);
+      var detailsJson;
+      var details;
+
+      print('');
+      int i = 0;
+      for (var coin in coins) {
+        print('==========| ' + i.toString() + ' |==========');
+        print(coin['currency_name']);
+        print(coin['cotation']);
+        print(coin['symbol']);
+        print(coin['image_url']);
+
+        detailsJson = jsonEncode(coin['details']);
+        details = jsonDecode(detailsJson);
+        print(detailsJson);
+        print('Fee : ' + details['fee'].toString());
+        print('About : ' + details['about']);
+
+        print('');
+
+        i++;
+
+        //Criar Moedas
+
+        //Criar Detalhes
+
+        //Criar Usuario
+      }
+    } else {
+      print('Error Ao Carregar o Json');
+    }
+  });
 }
