@@ -1,28 +1,49 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:applistamoedas/src/controllers/coins_controller.dart';
+import 'package:applistamoedas/src/request/ler_json_request.dart';
 import 'package:applistamoedas/src/utils/format_money.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeCoins extends StatefulWidget {
   const HomeCoins({Key? key}) : super(key: key);
-
   @override
   State<HomeCoins> createState() => _HomeCoinsState();
 }
 
 class _HomeCoinsState extends State<HomeCoins> {
   @override
+  void initState() {
+    super.initState();
+    Dados().GetJson();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return SingleChildScrollView(
+        child: Column(
+      children: [
+        Obx(() {
+          return Column(children: [
+            Usuario(context),
+            Column(
+              children: ListaDeMoedas(context),
+            )
+          ]);
+        })
+      ],
+    ));
   }
 }
 
 List<Widget> ListaDeMoedas(context) {
   List<Widget> coins = [];
+
   for (int i = 0; i != 8; i++) {
     var coin = InkWell(
-      onTap: () {
-        //Get.toNamed('/editarAtividade');
-      },
+      onTap: () {},
       child: Container(
         padding: const EdgeInsets.only(left: 12.0),
         margin: const EdgeInsets.symmetric(
