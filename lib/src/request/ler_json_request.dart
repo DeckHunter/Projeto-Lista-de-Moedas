@@ -16,41 +16,41 @@ class Dados {
     final future = http.get(uri);
     future.then((response) {
       if (response.statusCode == 200) {
+        //===============================================================
         dynamic jsonData = jsonDecode(response.body);
         coinsController.json.value = Map<String, dynamic>.from(jsonData);
+
+        Usuario usuario = new Usuario(
+          message: jsonData['message'],
+          userBalance: jsonData['user_balance'],
+          walletId: jsonData['wallet_id'],
+        );
+        coinsController.usuario = usuario;
+        //==============================================================
+        Moeda moeda = new Moeda();
+        Detalhes detalhe = new Detalhes();
+        dynamic detailsJson;
+        dynamic details;
+        dynamic coinsJson = jsonEncode(jsonData['data']);
+        dynamic coins = jsonDecode(coinsJson);
+
+        int i = 0;
+
+        for (var coin in coins) {
+          i++;
+          moeda.AddMoeda(coin['currency_name'], coin['cotation'],
+              coin['symbol'], coin['image_url']);
+
+          detailsJson = jsonEncode(coin['details']);
+          details = jsonDecode(detailsJson);
+
+          detalhe.AddDetalhe(details['about'], details['fee']);
+        }
+        coinsController.moedas = moeda.GetListMoedas();
+        coinsController.detalhes = detalhe.GetListDetalhes();
+        coinsController.tamanho = i;
+        //==============================================================
       }
     });
   }
-}
-
-GetUsuario(json) {
-  Usuario usuario = new Usuario(
-      message: json['message'],
-      userBalance: json['user_balance'],
-      walletId: json['wallet_id'],
-      moedas: GetCoins(json));
-  return usuario;
-}
-
-GetDetalhes(c) {
-  dynamic detailsJson;
-  dynamic details;
-  detailsJson = jsonEncode(c['details']);
-  details = jsonDecode(detailsJson);
-  Detalhes detalhe = new Detalhes(about: details['about'], fee: details['fee']);
-  return detalhe;
-}
-
-GetCoins(json) {
-  dynamic coinsJson = jsonEncode(json['data']);
-  dynamic coins = jsonDecode(coinsJson);
-
-  List<Moeda> moedas = [];
-  Moeda moeda = new Moeda();
-
-  for (var coin in coins) {
-    moeda.AddMoeda(coin['currency_name'], coin['cotation'], coin['symbol'],
-        coin['image_url'], GetDetalhes(coin));
-  }
-  return moeda.GetListMoedas();
 }

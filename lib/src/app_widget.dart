@@ -1,5 +1,5 @@
 import 'package:applistamoedas/src/bindings/test_bindings.dart';
-import 'package:applistamoedas/src/views/home_view.dart';
+import 'package:applistamoedas/src/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => const HomeCoins(),
+          page: () => const HomePage(),
           binding: TestBinding(),
         ),
       ],

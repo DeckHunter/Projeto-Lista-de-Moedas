@@ -7,22 +7,19 @@ class Moeda {
   String? cotation;
   String? symbol;
   String? imageUrl;
-  Detalhes? detalhes;
-  Moeda(
-      {this.currencyName,
-      this.cotation,
-      this.symbol,
-      this.imageUrl,
-      this.detalhes});
+  Moeda({
+    this.currencyName,
+    this.cotation,
+    this.symbol,
+    this.imageUrl,
+  });
 
-  AddMoeda(nome, cotacao, simbolo, urlImg, detalhe) {
+  AddMoeda(nome, cotacao, simbolo, urlImg) {
     Moeda n = new Moeda(
-      cotation: cotacao,
-      currencyName: nome,
-      symbol: simbolo,
-      imageUrl: urlImg,
-      detalhes: detalhe,
-    );
+        cotation: cotacao,
+        currencyName: nome,
+        symbol: simbolo,
+        imageUrl: urlImg);
     moedas.add(n);
   }
 
